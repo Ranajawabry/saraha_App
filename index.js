@@ -8,7 +8,9 @@ import connectDB from './Db/connectionDB.js'
 const app = express()
 initApp(express,app);
 const port = 3000
-connectDB().then(
+connectDB().then(()=>{
     app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+}
+   
 )
-app.get('/', (req, res) => res.json('Hello World!'))
+
